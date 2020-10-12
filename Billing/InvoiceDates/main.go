@@ -37,7 +37,7 @@ func getInvoiceDate(subID string, invoiceName string) {
 		log.Println("Please add in an invoice name")
 	}
 
-	invoiceClient := billing.NewInvoicesClient(subID, subID)
+	invoiceClient := billing.NewInvoicesClient(subID, "")
 
 	if azureAuth() == nil {
 		log.Panicln("No Azure CLI auth detected!")
